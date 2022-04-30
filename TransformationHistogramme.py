@@ -35,9 +35,6 @@ def prob_cum(img):
 def egalisation(img):
     image = copy.copy(img)
 
-    N = image.size
-    im_histo = histogramme(image)[0] / N
-
     output = np.zeros([image.shape[0], image.shape[1]])
     _c = prob_cum(image)
     for i in range(0, image.shape[0]):
@@ -45,6 +42,16 @@ def egalisation(img):
             output[i][j] = _c[image[i][j]] * 255
 
     return output
+
+def etirement(img):
+    image = copy.copy(img)
+    X = copy.copy(img)
+    mx = np.amax(image)
+    mn = np.amin(image)
+    for i in range(0, image.shape[0]) :
+        for j in range(0, image.shape[1]) :
+            X[i][j] = (255/(mx - mn)*(img[i][j] - mn))
+    return X
 
 class Transformation:
     pass
