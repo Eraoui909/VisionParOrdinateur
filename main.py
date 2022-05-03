@@ -3,11 +3,9 @@ import matplotlib.pyplot as plt
 from Binarisation import *
 from TransformationHistogramme import *
 import copy
-
-
+from Filters import *
 
 if __name__ == '__main__':
-
     url = "D:\MST_SDSI\S2\Vision par ordinateur\ImageTest\ImageTest\plage.jpg"
     image = cv2.imread(url)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -41,10 +39,33 @@ if __name__ == '__main__':
 
     plt.hist(etirement(image).ravel(), 255, [0, 255])
     plt.show()
+    
+    
+     # Generate Gaussian noise
+    gauss = np.random.normal(0, 1, image.size)
+    gauss = gauss.reshape(image.shape[0], image.shape[1]).astype('uint8')
+    # Add the Gaussian noise to the image
+    img_gauss = cv2.add(image, gauss)
+
+    plt.imshow(img_gauss, cmap='gray')
+    plt.show()
+
+    plt.imshow(filter_gaussien(img_gauss, 2), cmap='gray')
+    plt.show()
+
+    output = []
+    plt.imshow(cv2.GaussianBlur(img_gauss, (5, 5), 2), cmap='gray')
+    plt.show()
+    
     """
 
 
 
+    plt.imshow(image, cmap='gray')
+    plt.show()
 
+    plt.imshow(filter_median(image, 9), cmap='gray')
+    plt.show()
 
-
+    plt.imshow(cv2.medianBlur(image, 9), cmap='gray')
+    plt.show()
