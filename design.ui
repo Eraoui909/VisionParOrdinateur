@@ -86,177 +86,119 @@
       </item>
      </layout>
     </item>
-    <item row="4" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>60</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>width</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="widthInput"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>60</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>height</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="heightInput"/>
-      </item>
-      <item alignment="Qt::AlignRight">
-       <widget class="QPushButton" name="resizeButton">
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-	background-color:&quot;#555555&quot;;
-	color:&quot;#fff&quot;;
-	padding:6px;
-	border-raduis: 5px
-}</string>
-        </property>
-        <property name="text">
-         <string>resize</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="1" rowspan="2">
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Binarisation</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QSlider" name="binValueSlider">
-        <property name="maximum">
-         <number>255</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>test</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QSlider" name="verticalSlider">
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
     <item row="3" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <widget class="QPushButton" name="histButton">
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
+         <widget class="QFrame" name="">
+          <property name="styleSheet">
+           <string notr="true">QFrame{
+	background-color:&quot;#F1F1F1&quot;
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QPushButton" name="histButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
 	color:&quot;#fff&quot;;
 	padding:6px;
 	border-raduis: 5px
 }</string>
-            </property>
-            <property name="text">
-             <string>Hostogramme</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="negatifButton">
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
+             </property>
+             <property name="text">
+              <string>Hostogramme</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="negatifButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
 	color:&quot;#fff&quot;;
 	padding:6px;
 	border-raduis: 5px
 }</string>
-            </property>
-            <property name="text">
-             <string>Negatif</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="otsuButton">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>75</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
+             </property>
+             <property name="text">
+              <string>Negatif</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="otsuButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>75</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
 	color:&quot;#fff&quot;;
 	padding:6px;
 	border-raduis: 5px;
 }</string>
-            </property>
-            <property name="text">
-             <string>OTSU</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="gaussFiltreButton">
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
+             </property>
+             <property name="text">
+              <string>OTSU</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="gaussFiltreButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
 	color:&quot;#fff&quot;;
 	padding:6px;
 	border-raduis: 5px;
 }</string>
-            </property>
-            <property name="text">
-             <string>Filtre Gaussien</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+             </property>
+             <property name="text">
+              <string>Filtre Gaussien</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="medianFiltreButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	background-color:&quot;#555555&quot;;
+	color:&quot;#fff&quot;;
+	padding:6px;
+	border-raduis: 5px;
+}</string>
+             </property>
+             <property name="text">
+              <string>Filtre Median</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	background-color:&quot;#555555&quot;;
+	color:&quot;#fff&quot;;
+	padding:6px;
+	border-raduis: 5px;
+}</string>
+             </property>
+             <property name="text">
+              <string>Filtre Moyenne</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
          <spacer name="horizontalSpacer_6">
@@ -358,6 +300,118 @@
       </item>
      </layout>
     </item>
+    <item row="4" column="0">
+     <widget class="QFrame" name="horizontalFrame">
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+	background-color: &quot;#F1F1F1&quot;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>width</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="widthInput"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>height</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="heightInput"/>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QPushButton" name="resizeButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:&quot;#555555&quot;;
+	color:&quot;#fff&quot;;
+	padding:6px;
+	border-raduis: 5px
+}</string>
+         </property>
+         <property name="text">
+          <string>resize</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="1" rowspan="2">
+     <widget class="QWidget" name="" native="true">
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+	background-color: &quot;#F1F1F1&quot;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Binarisation</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QSlider" name="binValueSlider">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Rotation</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QSlider" name="rotationSlider">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="maximum">
+          <number>360</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -392,54 +446,6 @@
     </hint>
     <hint type="destinationlabel">
      <x>527</x>
-     <y>271</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>verticalSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>imageLabel</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>657</x>
-     <y>387</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>527</x>
-     <y>271</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>binValueSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>imageLabel</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>638</x>
-     <y>143</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>527</x>
-     <y>271</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>otsuButton</sender>
-   <signal>clicked()</signal>
-   <receiver>imageLabel</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>84</x>
-     <y>63</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>524</x>
      <y>271</y>
     </hint>
    </hints>
