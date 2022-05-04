@@ -162,7 +162,7 @@
       <item>
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>test</string>
+         <string>Rotation</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -170,9 +170,12 @@
        </widget>
       </item>
       <item alignment="Qt::AlignHCenter">
-       <widget class="QSlider" name="verticalSlider">
+       <widget class="QSlider" name="rotationSlider">
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="maximum">
+         <number>360</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -253,6 +256,36 @@
             </property>
             <property name="text">
              <string>Filtre Gaussien</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="medianFiltreButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color:&quot;#555555&quot;;
+	color:&quot;#fff&quot;;
+	padding:6px;
+	border-raduis: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Filtre Median</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color:&quot;#555555&quot;;
+	color:&quot;#fff&quot;;
+	padding:6px;
+	border-raduis: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Filtre Moyenne</string>
             </property>
            </widget>
           </item>
@@ -397,7 +430,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>verticalSlider</sender>
+   <sender>rotationSlider</sender>
    <signal>valueChanged(int)</signal>
    <receiver>imageLabel</receiver>
    <slot>setNum(int)</slot>
@@ -429,22 +462,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>otsuButton</sender>
-   <signal>clicked()</signal>
-   <receiver>imageLabel</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>84</x>
-     <y>63</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>524</x>
-     <y>271</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>resetButton</sender>
    <signal>clicked()</signal>
    <receiver>imageLabel</receiver>
@@ -457,6 +474,22 @@
     <hint type="destinationlabel">
      <x>527</x>
      <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>otsuButton</sender>
+   <signal>clicked()</signal>
+   <receiver>imageLabel</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>
