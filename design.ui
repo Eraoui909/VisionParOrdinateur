@@ -36,7 +36,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="1">
-     <widget class="QPushButton" name="resetButton">
+     <widget class="QPushButton" name="resetBtn">
       <property name="text">
        <string>RESET</string>
       </property>
@@ -91,7 +91,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
-         <widget class="QFrame" name="">
+         <widget class="QFrame" name="frame">
           <property name="styleSheet">
            <string notr="true">QFrame{
 	background-color:&quot;#F1F1F1&quot;
@@ -153,7 +153,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="gaussFiltreButton">
+            <widget class="QPushButton" name="gaussFilter">
              <property name="styleSheet">
               <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
@@ -168,7 +168,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="medianFiltreButton">
+            <widget class="QPushButton" name="medianFiltre">
              <property name="styleSheet">
               <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
@@ -183,7 +183,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="filtreMoyen">
              <property name="styleSheet">
               <string notr="true">QPushButton{
 	background-color:&quot;#555555&quot;;
@@ -359,7 +359,7 @@
      </widget>
     </item>
     <item row="3" column="1" rowspan="2">
-     <widget class="QWidget" name="" native="true">
+     <widget class="QWidget" name="widget" native="true">
       <property name="styleSheet">
        <string notr="true">QFrame{
 	background-color: &quot;#F1F1F1&quot;
@@ -451,7 +451,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>resetButton</sender>
+   <sender>resetBtn</sender>
    <signal>clicked()</signal>
    <receiver>imageLabel</receiver>
    <slot>clear()</slot>
