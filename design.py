@@ -1,4 +1,3 @@
-import imutils
 from PyQt5 import uic
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
@@ -9,7 +8,7 @@ from PIL import Image
 import sys
 import numpy as np
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 class Ui(QtWidgets.QMainWindow):
