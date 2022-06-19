@@ -64,8 +64,9 @@ if __name__ == '__main__':
     plt.imshow(image, cmap='gray')
     plt.show()
 
-    plt.imshow(filter_median(image, 9), cmap='gray')
+
+    plt.imshow(filter_gaussien(image, 2), cmap='gray')
     plt.show()
 
-    plt.imshow(cv2.medianBlur(image, 9), cmap='gray')
+    plt.imshow(cv2.GaussianBlur(image, (5, 5), 2), cmap='gray')
     plt.show()
